@@ -4,7 +4,7 @@
 > Replace `<img/>` to `<picture/>` supports webp
 
 [![npm (scoped)](https://img.shields.io/npm/v/gulp-webp-html-fix.svg?style=flat-square)](https://www.npmjs.com/package/gulp-webp-html-fix)
-[![License](https://img.shields.io/github/license/bladhard/gulp-webp-html-fix.svg?style=flat-square)](https://github.com/Bladhard/gulp-webp-html-fix/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/bladhard/gulp-webp-html-fix.svg?style=flat-square)](https://github.com/Bladhard/gulp-webp-html-fix/blob/master/LICENSE)
 ## Install
 
 ```npm
