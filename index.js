@@ -5,7 +5,7 @@ const through = require('through2')
 const pluginName = 'gulp-webp-html-fix'
 
 module.exports = function (extensions) {
-    var extensions = extensions || ['.jpg', '.png', '.jpeg', 'JPG']
+    var extensions = ['.jpg', '.png', '.jpeg', '.GIF', '.gif', '.JPG', '.PNG', '.JPEG'];
     return through.obj(function (file, enc, cb) {
         if (file.isNull()) {
             cb(null, file)
@@ -45,8 +45,8 @@ module.exports = function (extensions) {
                         var regexpArray = Re.exec(line)
                         var imgTag = regexpArray[0]
                         var newUrl = regexpArray[2]
-                        // Если в урле есть .webp, пропускаем
-                        if (newUrl.indexOf('.webp') + 1) return line
+                        // Если в урле есть .webp или .svg, пропускаем
+                        if (newUrl.indexOf('.webp') + 1 || newUrl.indexOf('.svg') + 1) return line
                         // Заменяем все расширения на .webp
                         for (k in extensions) {
                             newUrl = newUrl.replace(extensions[k], '.webp')
